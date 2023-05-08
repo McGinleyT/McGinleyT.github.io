@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>McGinley - Projects</title>
+
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="A personal website for Thomas McGinley, showing some projects and contact options">
+    <meta name="keywords" content="McGinley, computer science, HTML">
+    <meta name="author" content="Thomas McGinley">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/shared.css" rel="stylesheet" />
+    <link href="./css/projects.css" rel="stylesheet" />
+    <link rel="icon" href="./images/logo.png" />
+</head>
+
+
+
+<body>
+    <!--        HEADER        -->
+    <header>
+        <div class="headCol">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
+            <div class="headRight">
+                <h1 id="pageTitle">PROJECTS</h1>
+                <nav>
+                    <ul class="pagelinks">
+                        <li class="home"><a link href="./index.html">//Home</a></li>
+                        <li class="proj"><a link href="./projects.html">//Projects</a></li>
+                        <li class="gal"><a link href="./gallery.html">//Gallery</a></li>
+                        <li class="abt"><a link href="./about.html">//About</a></li>
+                        <li class="con"><a link href="./contact.html">//Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!--        MAIN        -->
+    <div class="main">
+
+        <!--        LEFT COLUMN        -->
+        <div class="column">
+            <h1>Cyclone</h1>
+            <br><br>
+            <img src="./images/cyclone.JPG" alt="Cyclone bot" id="cyclone">
+
+            <p>
+                Cyclone is a 15-pound battlebot designed, built, tested, and battled by a team of four I was a part of
+                for the Centerville High School engineering class. The whole project took about 11 months and $976 to
+                complete. It uses a lawnmower blade as its weapon, providing it high durability and high flexibility
+                and letting it manage hits very well. Cyclone was a test of our machining capabilities requiring use of
+                mills, lathes, routers, wire EDMs,
+                some manual and some CNC. The design process challenged our knowlegdge of CAD software and the
+                engineering design process.
+            </p>
+            <p>
+                My contributions to the team began with my background in technical drawings. Once our parts began their
+                design stages, I was able to make some of the drawings of the parts from the 3D model. The team decided
+                to give me some of the more complicated drawings, while the more basic drawings were given to be done by
+                the people who had less experience with making drawings. Over time, some prints needed to be changed and
+                I would often check the drawings to make sure all necessary dimensions were measured to the proper
+                accuracy and tolerance.
+            </p>
+            <p>
+                Soldering was another area I had some experience in while going into this project. I had, in the past,
+                soldered small through-hole projects on my own. The soldering we had to do for our robot was a little
+                different from the smaller circuits I worked on in the past. We needed to solder 14 AWG and 12 AWG wires
+                together, attached to bullet connectors, and battery connectors. Soldering clean joints and keeping all
+                connectors insulated with heat shrink is necessary to ensure the batteries, motors, ESCs and radio
+                receiver didn't short out. I made it a priority to keep all exposed wires cleanly connected and wrapped.
+            </p>
+
+            <p>
+                The project resulted in our bot placing first place for high school teams and second place overall at
+                the fall 2019 Xtreme BOTS tournament. I recently returned to the event to help the current Centerville
+                High School teams with necessary repairs between fights.
+            </p>
+            <p>
+                See some of Cyclone's fights in the <a href="./gallery.html" id="galLink">Gallery</a>.
+            </p>
+            <blockquote>
+                "One of the most difficult issues to overcome during the Cyclone design process was the design of the
+                weapon's bearing housing. A design with a stationary weapon shaft along with a roller-bearing housing
+                had never been done in the 15 pound division, so it was definitely a challenge designing something from
+                scratch that was unproven."
+            </blockquote>
+            <cite>-Cale Cokley, Cyclone Team</cite>
+            <br><br>
+
+            <h1>Website</h1>
+            <br><br>
+            <p>
+                This website was done as a project for my HTML and CSS class at Sinclair Community College. It is meant
+                to be a show of my abilities with HTML and CSS that I learned during the semester. Every line of code
+                was typed from scratch! My prior programming experience was with structured or object-oriented and
+                working with a markup language took a little getting used to. After getting familiar with it, I find
+                myself going into other website's source files and seeing what bits I can parse though most of them use
+                more elaborate frontend frameworks.
+            </p>
+
+            <aside>
+                <h2>NOTE:</h2>
+                <p>
+                    The website is completed and in its alpha version. Testing has been done to ensure every page
+                    displays on all screens down to around 300 pixels wide. Any bugs should
+                    be reported via the <a href="./contact.html" id="contLink">Contact</a> page.
+                </p>
+            </aside>
+        </div>
+
+
+
+        <!--        RIGHT COLUMN        -->
+        <div class="column">
+            <h1>Oxygen</h1>
+            <br><br>
+            <img src="./images/oxygen.png" alt="Oxygen drone" id="oxygen">
+            <p>
+                This was second drone I custom built, and the one still operational today. I wanted to make a UAV that
+                was more stable in flight and a bit more compact. Its frame is a 250mm 115g carbon fiber, with a unique
+                mounting orientation. For my electronics stack I used a Rush Tank VTX, DALRC F405 AIO flight controller,
+                and a dual-antenna Spektrum RX. My ESCs needed to be mounted on the frame arms (which were very thin),
+                so I used four Flycolor 36A X Cross Slims and connected them to EMAX RS2205 2300KV motors which provided
+                good torque and a design that actively cooled the motor coils. I've gone through several sets of
+                propellers, but consistently have success with Ethix S5 tri-blades. My camera is currently a Foxeer Mini
+                Predator, but may be replaced in the near future. Oxygen is built for 4s batteries, so it's not the
+                fastest drone I've made but it's light and agile and very consistent.
+            </p>
+            <p>
+                I decided to go for a very unique designed frame that
+                would maximize my stability by putting the center of mass both very close to the flight controller and
+                close to the plane of the propellers. In order to meet these conditions, I picked a frame that mounted
+                the battery at the level of the motors and would have my stack hang below that level. Normally the other
+                way around, with the electronics stack inline with the motors and battery hanging below, this
+                orientation required me to mount my stack upside-down relative to the motors. It took some playing
+                around with Betaflight to make my flight controller believe it was right side up before it was working
+                properly.
+            </p>
+            <p>
+                See more images in figures 2a-2f in the <a href="./gallery.html" id="galLink">Gallery</a>.
+            </p>
+
+            <br><br>
+            <h1>Wendigo</h1>
+            <br><br>
+            <img src="./images/wendigo.png" alt="Wendigo drone" id="wendigo">
+            <p>
+                This was my first foray into building freestyle and racing drones. Wendigo was very much a testbed to
+                see what worked and what would result in catastrophe when changing PID settings, batteries, and
+                propellers.
+                The parts that stayed consistent were the DALRC F405 flight controller, DALRC Engine Pro 4-in-1 ESC, and
+                Emax ECO2306 2400kv motors. The VTX, RX, and camera were largely the same as Oxygen.
+            </p>
+            <p>
+                This drone experienced several communications issues causing spinouts and video losses. The frame took
+                heavy damage from a number of crashes and Wendigo was disassembled, its electronics de-soldered,
+                disconnected and cleaned, and the UAV as we know it was retired in early 2021.
+            </p>
+            <p>
+                See more images in figures 1a-1c in the <a href="./gallery.html" id="galLink">Gallery</a>.
+            </p>
+        </div>
+    </div>
+
+
+
+    <!--        TABLE        -->
+    <table>
+        <thead>
+            <tr>
+                <th>Project</th>
+                <th>Origin</th>
+                <th>Status</th>
+                <th>Completion Time</th>
+                <th>Cost</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Wendigo</td>
+                <td>Personal project</td>
+                <td>Dismantled</td>
+                <td>1 month</td>
+                <td>~$250</td>
+                <td>February, 2020</td>
+            </tr>
+            <tr>
+                <td>Oxygen</td>
+                <td>Personal project</td>
+                <td>Completed - Operational</td>
+                <td>&#60;1 month</td> <!-- &#60; is "<" -->
+                <td>~$300</td>
+                <td>March, 2020</td>
+            </tr>
+            <tr>
+                <td>Cyclone*</td>
+                <td>School project</td>
+                <td>Completed - On display</td>
+                <td>11 months</td>
+                <td>$976 (funded)</td>
+                <td>December, 2019</td>
+            </tr>
+            <tr>
+                <td>Pumpkin Trebuchet*</td>
+                <td>School project</td>
+                <td>Completed</td>
+                <td>2 months</td>
+                <td>$75</td>
+                <td>October, 2019</td>
+            </tr>
+            <tr>
+                <td>Pi cluster</td>
+                <td>Personal project</td>
+                <td>Incomplete - In resource acquisition</td>
+                <td>n/a</td>
+                <td>~$300 (projected)</td>
+                <td>August, 2023 (projected)</td>
+            </tr>
+            <tr>
+                <td>Personal Website</td>
+                <td>School project</td>
+                <td>Completed - In alpha</td>
+                <td>&#60;1 month</td>
+                <td>$0</td>
+                <td>May, 2023</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="6" id="footnote">* Team project</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <!--        SOCIALS        -->
+    <div class="socials">
+        <ul>
+            <li><a href="https://github.com/McGinleyT"><img src="./images/github.png" alt="github"></a></li>
+            <li><a href="https://www.instagram.com/mcginley.937/"><img src="./images/ig.png" alt="instagram"></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/thomas-mcginley-589570271"><img src="./images/linkedin.png"
+                        alt="linkedin"></a></li>
+        </ul>
+    </div>
+
+
+
+    <!--        FOOTER        -->
+    <footer>
+        THOMAS McGINLEY &nbsp; | &nbsp; APRIL 2023 &nbsp; | &nbsp; <a class="contactlink"
+            href="./readme.txt">&#9067;</a>
+        &nbsp; | &nbsp; <a class="contactlink" href="tel:+19379419169">(937)941-9169</a>
+        <!--&nbsp; is NonBreakingSpace TM 4/18-->
+    </footer>
+</body>

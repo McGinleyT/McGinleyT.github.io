@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>McGinley - Contact</title>
+
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="A personal website for Thomas McGinley, showing some projects and contact options">
+    <meta name="keywords" content="McGinley, computer science, HTML">
+    <meta name="author" content="Thomas McGinley">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/shared.css" rel="stylesheet" />
+    <link href="./css/contact.css" rel="stylesheet" />
+    <link rel="icon" href="./images/logo.png" />
+</head>
+
+
+
+<body>
+    <!--        HEADER        -->
+    <header>
+        <div class="headCol">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
+            <div class="headRight">
+                <h1 id="pageTitle">CONTACT</h1>
+                <nav>
+                    <ul class="pagelinks">
+                        <li class="home"><a link href="./index.html">//Home</a></li>
+                        <li class="proj"><a link href="./projects.html">//Projects</a></li>
+                        <li class="gal"><a link href="./gallery.html">//Gallery</a></li>
+                        <li class="abt"><a link href="./about.html">//About</a></li>
+                        <li class="con"><a link href="./contact.html">//Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!--        MAIN        -->
+    <div class="main">
+        <!--        LEFT COLUMN        -->
+        <div class="column">
+            <br>
+            <p id="description">
+                If you're looking to get in contact with me, there are a few options for you! Whether you are looking
+                to get in touch with an employment opportunity, want to comment on my work, or just about anything else,
+                there are a few ways you can do so.
+            </p>
+            <p id="description">
+                The best way to get ahold of me is to send me an email at
+                <a class="contactlink" href="mailto: thomasmcginley360@gmail.com">thomasmcginley360@gmail.com</a>.
+                I will make sure to reply to anything sent there within 24 hours.
+            </p>
+            <p id="description">
+                You are also invited to send me a message and some contact info for yourself using the form to the
+                right. Please note it is in an ALPHA VERSION and any urgent messages should be done through my email
+                link above, or through my phone number below.
+            </p>
+        </div>
+
+
+
+        <!--        RIGHT COLUMN        -->
+        <div class="column">
+            <h2 id="disclaimer">required fields marked with *</h2>
+
+            <!--        FORM        -->
+            <form contact>
+                <p>Name? *</p>
+                <input type="text" id="name" name="name" maxlength="250" placeholder="ex. John Doe" required>
+                <br><br><br>
+
+                <p>Reason for contact? (Select all that apply)</p>
+                <input type="checkbox" id="op1" name="op1" value="Employment">
+                <label for="op1">Job offer</label><br>
+                <input type="checkbox" id="op2" name="op2" value="Commission">
+                <label for="op2">Commissions</label><br>
+                <input type="checkbox" id="op3" name="op3" value="Guidance">
+                <label for="op3">Looking for help</label><br>
+                <input type="checkbox" id="op4" name="op4" value="Casual">
+                <label for="op4">Just chatting</label><br>
+                <input type="checkbox" id="op5" name="op5" value="Other">
+                <label for="op5">Something else</label><br>
+                <br><br>
+
+                <p>What is the best way to reach you for a reply?</p>
+                <input type="radio" id="opt1" name="reply" value="phone">
+                <label for="opt1">Phone</label>
+                <input type="radio" id="opt2" name="reply" value="Teacher">
+                <label for="opt2">Email</label>
+                <input type="radio" id="opt3" name="reply" value="Student">
+                <label for="opt3">Text</label>
+                <br><br><br>
+
+                <p>What's a good phone number to reach you at? *</p>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br><br>
+
+                <p>A different number for text, if applicable:</p>
+                <input type="tel" id="phone" name="phone2" placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <br><br><br>
+
+                <p>What's a good email address to reach you at? *</p>
+                <input type="email" id="email" name="email" placeholder="name@address.com" required>
+                <br><br><br>
+
+                <p>Message *</p>
+                <textarea id="msg" rows="4" cols="30"></textarea>
+                <br><br><br>
+
+                <input type="submit" id="submit">
+                <input type="reset" id="reset">
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--        SOCIALS        -->
+    <div class="socials">
+        <ul>
+            <li><a href="https://github.com/McGinleyT"><img src="./images/github.png" alt="github"></a></li>
+            <li><a href="https://www.instagram.com/mcginley.937/"><img src="./images/ig.png" alt="instagram"></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/thomas-mcginley-589570271"><img src="./images/linkedin.png"
+                        alt="linkedin"></a></li>
+        </ul>
+    </div>
+
+
+
+    <!--        FOOTER        -->
+    <footer>
+        THOMAS McGINLEY &nbsp; | &nbsp; APRIL 2023 &nbsp; | &nbsp; <a class="contactlink"
+            href="./readme.txt">&#9067;</a>
+        &nbsp; | &nbsp; <a class="contactlink" href="tel:+19379419169">(937)941-9169</a>
+        <!--&nbsp; is NonBreakingSpace TM 4/18-->
+    </footer>
+</body>

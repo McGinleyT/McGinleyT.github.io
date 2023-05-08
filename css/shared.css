@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/*Footer font*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+
+/*
+COLOR PALETTE:
+Dark gray: rgb(20,20,20)
+header gray: rgb(30,30,30)
+footer gray: rgb(50,50,50)
+text white: rgb(250,250,240)
+
+orange: rgb(255,100,0)
+green: rgb(0,255,95)
+blue: rgb(0,161,255)
+purple: rgb(95,0,255)
+red: rgb(255,0,33)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(20, 20, 20);
+}
+
+body {
+    font-size: 100%;
+    font-weight: inherit;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.2em;
+    vertical-align: baseline;
+}
+
+
+
+/*HEADER (VERSION 2)--------------------------------*/
+header {
+    background-color: rgb(30, 30, 30);
+    border-bottom: 2px solid var(--theme);
+    line-height: 0%;
+}
+
+
+
+.headCol {
+    display: flex;
+    align-items: center;
+}
+
+.headRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.logo {
+    cursor: pointer;
+    height:64px;
+    width:64px;
+    margin-left:10px;
+}
+
+
+
+#pageTitle {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    font-family: 'courier new', serif;
+    font-weight: normal;
+    font-size: 65px;
+    color: rgb(250, 250, 240);
+    text-decoration: none;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav>ul {
+    /*padding: 10px 0%;*/
+    list-style: none;
+}
+
+nav>ul>li>a,
+ol>li>a {
+    font-family: 'courier new', serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgb(250, 250, 240);
+    text-decoration: none;
+}
+
+nav>ul>li {
+    display: inline-block;
+    padding: 4px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+nav>ul>li a,
+ol a {
+    transition: all 0.25s ease 0s;
+    /* Fade in color changes when hovering over links TM 4/18*/
+}
+
+nav>ul>li.home a:hover,
+ol>li.home a:hover {
+    color: rgb(255, 100, 0);
+}
+
+nav>ul>li.proj a:hover,
+ol>li.proj a:hover {
+    color: rgb(0, 255, 95);
+}
+
+nav>ul>li.gal a:hover,
+ol>li.gal a:hover {
+    color: rgb(0, 161, 255);
+}
+
+nav>ul>li.abt a:hover,
+ol>li.abt a:hover {
+    color: rgb(95, 0, 255);
+}
+
+nav>ul>li.con a:hover,
+ol>li.con a:hover {
+    color: rgb(255, 0, 33);
+}
+
+ul>li a:hover,
+ol>li a:hover {
+    font-size: 18px;
+}
+
+
+
+/*MAIN BODY BOX--------------------------------------*/
+.main {
+    margin: 10px 10%;
+    background-color: transparent;
+
+    /*TWO OPTIONS FOR MAIN DISPLAY:*/
+    /*I ended up not using either, but they're here just in case*/
+    /*box-shadow: inset 0px 0px 250px var(--theme);*/
+    /*border: 5px solid var(--theme);*/
+}
+
+
+
+/*SOCIALS ICONS------------------*/
+.socials {
+    display: table;
+    margin: 0 auto;
+}
+
+.socials>ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.socials>ul>li {
+
+    display: inline;
+}
+
+
+
+/*FOOTER--------------------------------------------*/
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0px;
+
+    background-color: rgb(50, 50, 50);
+    border-top: 2px solid var(--theme);
+
+    text-align: center;
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+}
+
+
+
+/*CONTACT LINKS-------------------------------------------*/
+.contactlink {
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    font-size: inherit;
+    transition: all 0.25s ease 0s;
+
+    overflow-wrap: anywhere;
+}
+
+.contactlink:hover {
+    color: var(--theme);
+}
+
+
+
+/*MEDIA AND PRINT-------------------------------------------*/
+@media screen and (max-width: 900px) {
+    nav>ul>li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    header {
+        width: 100%
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    h1#pageTitle {
+        font-size: 35px;
+    }
+
+    .main {
+        margin: 10px 1%;
+    }
+}
+
+
+
+@media print {
+    *,
+    #pageTitle,
+    nav>ul>li>a,
+    ol>li>a {
+        color: black;
+    }
+
+    @page {
+        size: landscape;
+    }
+}

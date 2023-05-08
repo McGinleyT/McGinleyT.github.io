@@ -1,0 +1,161 @@
+@charset "utf-8";
+/*
+COLOR PALETTE:
+Dark gray: rgb(20,20,20)
+header gray: rgb(30,30,30)
+footer gray: rgb(50,50,50)
+green: rgb(0,255,95)
+*/
+
+:root {
+    --theme: rgb(0, 255, 95);
+}
+
+
+
+/*MAIN BODY-----------------------------------------------*/
+.main {
+    display: flex;
+}
+
+
+
+img#cyclone {
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+
+}
+
+img#oxygen,
+img#wendigo {
+    display: block;
+    width: 50%;
+    margin: auto
+}
+
+
+
+.column {
+    flex: 50%;
+    flex-direction: row;
+    font-family: 'courier new', serif;
+    font-size: 16px;
+    text-align: left;
+    color: rgb(250, 250, 240);
+}
+
+.column>p {
+    padding: 10px 5%;
+    text-indent: 40px;
+}
+
+.column>h1 {
+    font-size: 65px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 25px;
+}
+
+
+
+/*ASIDE-------------------------------*/
+aside {
+    margin: 10px 10%;
+    background-color: rgba(50, 50, 50, .5);
+    padding: 2% 5%;
+}
+
+
+
+/*BLOCKQUOTE-------------------------------*/
+blockquote {
+    border-radius: 20px;
+    margin: 10px 10%;
+    background-color: rgba(50, 50, 50, .5);
+    padding: 2% 5%;
+    font-weight: bold;
+}
+
+cite {
+    margin: 0px 10%;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+
+/*PAGE LINKS---------------------------*/
+a#galLink,
+a#contLink {
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    font-size: inherit;
+    transition: all 0.25s ease 0s;
+}
+
+a#galLink:hover {
+    color: rgb(0, 161, 255);
+}
+
+a#contLink:hover {
+    color: rgb(255, 0, 33);
+}
+
+
+/*TABLE--------------------------------*/
+table {
+    font-family: 'Courier New', serif;
+    color: rgb(250, 250, 240);
+    display: block;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 10px 10%;
+}
+
+td,
+th {
+    border: 1px solid rgb(150, 150, 150);
+    text-align: left;
+    padding: 5px;
+    width: 10%;
+}
+
+th#footnote {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(50, 50, 50);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(30, 30, 30);
+}
+
+
+
+/*MEDIA----------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .main {
+        flex-flow: column;
+    }
+
+    .column>h1 {
+        border-top: 2px solid var(--theme)
+    }
+
+    table {
+        margin: 10px auto;
+        padding-left: 1%;
+        padding-right: 1%;
+        overflow-x: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .column>h1:not(:first-of-type) {
+        border-top: 2px solid var(--theme)
+    }
+}
