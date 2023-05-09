@@ -141,7 +141,7 @@ tr:nth-child(odd) {
         flex-flow: column;
     }
 
-    .column>h1 {
+    .column>h1:not(.mobileFirst) {
         border-top: 2px solid var(--theme)
     }
 

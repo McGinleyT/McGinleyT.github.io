@@ -104,10 +104,10 @@ div.cheems {
 /*MEDIA------------------------------------------------------*/
 @media screen and (max-width: 900px) {
     .main {
-        flex-flow: column-reverse;
+        flex-flow: column;
     }
 
-    .column>h1 {
+    .column>h1:not(.mobileFirst) {
         border-top: 2px solid var(--theme)
     }
 }
