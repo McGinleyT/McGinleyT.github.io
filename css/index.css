@@ -157,15 +157,23 @@ img {
     }
     
     h1 {
-        font-size: 50px;
-        margin-top: 5px;
+        font-size: 75px;
+        margin-top: 6px;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 48px;
     }
 
     h3 {
         font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    hr {
+        width:75%;
     }
 }
