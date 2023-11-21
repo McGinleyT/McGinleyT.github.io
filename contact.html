@@ -57,12 +57,9 @@
                 I will make sure to reply to anything sent there within 24 hours.
             </p>
             <p id="description">
-                The backend for the contact form on this page is currently in development and is expected to launch with
-                V1.0.0 with a test campaign in a later beta version. Please note that the form DOES NOT currently work,
-                and I will not receive your message that way. I again ask you to contact me via my email (<a
-                    class="contactlink" href="mailto: thomasmcginley360@gmail.com">thomasmcginley360@gmail.com</a>) or
-                by phone (<a class="contactlink" href="tel:+19379419169">(937)941-9169</a>) at this time until further
-                notice. I apologize for the inconvenience and thank you for your understanding.
+                The backend of this form is in functional testing as of version 0.3.0. Email me directly at <a
+                    class="contactlink" href="mailto: thomasmcginley360@gmail.com">thomasmcginley360@gmail.com</a> if
+                you do not hear back from me in a timely manner. Thank you for your patience as I learn.
             </p>
         </div>
 
@@ -73,41 +70,41 @@
             <h2 id="disclaimer">required fields marked with *</h2>
 
             <!--        FORM        -->
-            <form contact>
+            <form contact class="gform" method="POST"
+                action="https://script.google.com/macros/s/AKfycbxg-KFkOFWB4TspCx_7Bm3hwzCCBwenxq5lYsH9Q3sTsYW-m5oCtCWnukjO65-mIAjk/exec"
+                onsubmit="alert('Thank you for your submission!\nI\'ll get back to you as soon as possible.'),form.reset()">
                 <p>Name? *</p>
                 <input type="text" id="name" name="name" maxlength="250" placeholder="ex. John Doe" required>
                 <br><br><br>
 
                 <p>Reason for contact? (Select all that apply)</p>
-                <input type="checkbox" id="op1" name="op1" value="Employment">
+                <input type="checkbox" id="op1" name="Reason" value="Employment">
                 <label for="op1">Job offer</label><br>
-                <input type="checkbox" id="op2" name="op2" value="Commission">
+                <input type="checkbox" id="op2" name="Reason" value="Commission">
                 <label for="op2">Commissions</label><br>
-                <input type="checkbox" id="op3" name="op3" value="Guidance">
+                <input type="checkbox" id="op3" name="Reason" value="Guidance">
                 <label for="op3">Looking for help</label><br>
-                <input type="checkbox" id="op4" name="op4" value="Casual">
+                <input type="checkbox" id="op4" name="Reason" value="Casual">
                 <label for="op4">Just chatting</label><br>
-                <input type="checkbox" id="op5" name="op5" value="Other">
+                <input type="checkbox" id="op5" name="Reason" value="Other">
                 <label for="op5">Something else</label><br>
                 <br><br>
 
                 <p>What is the best way to reach you for a reply?</p>
-                <input type="radio" id="opt1" name="reply" value="phone">
+                <input type="radio" id="opt1" name="reply method" value="Phone">
                 <label for="opt1">Phone</label>
-                <input type="radio" id="opt2" name="reply" value="Teacher">
+                <input type="radio" id="opt2" name="reply method" value="Email">
                 <label for="opt2">Email</label>
-                <input type="radio" id="opt3" name="reply" value="Student">
+                <input type="radio" id="opt3" name="reply method" value="Text">
                 <label for="opt3">Text</label>
                 <br><br><br>
 
                 <p>What's a good phone number to reach you at? *</p>
-                <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
                 <br><br>
 
                 <p>A different number for text, if applicable:</p>
-                <input type="tel" id="phone" name="phone2" placeholder="123-456-7890"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" id="phone" name="alt phone" placeholder="123-456-7890">
                 <br><br><br>
 
                 <p>What's a good email address to reach you at? *</p>
@@ -115,7 +112,7 @@
                 <br><br><br>
 
                 <p>Message *</p>
-                <textarea id="msg" rows="4" cols="30"></textarea>
+                <textarea id="msg" rows="4" cols="30" name="message"></textarea>
                 <br><br><br>
 
                 <input type="submit" id="submit">
@@ -146,4 +143,5 @@
         &nbsp; | &nbsp; <a class="contactlink" href="tel:+19379419169">(937)941-9169</a>
         <!--&nbsp; is NonBreakingSpace TM 4/18-->
     </footer>
+    <script data-cfasync="false" type="text/javascript" src="./scripts/form-submission-handler.js"></script>
 </body>
