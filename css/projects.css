@@ -28,7 +28,9 @@ img#cyclone {
 }
 
 img#oxygen,
-img#wendigo {
+img#wendigo,
+img#server,
+img#websitelogo {
     display: block;
     width: 50%;
     margin: auto
@@ -55,6 +57,7 @@ img#wendigo {
     font-weight: normal;
     text-align: center;
     padding-top: 25px;
+    line-height: 1em;
 }
 
 
@@ -87,11 +90,24 @@ cite {
 
 /*PAGE LINKS---------------------------*/
 a#galLink,
-a#contLink {
+a#contLink,
+a#jcLink {
     color: rgb(150, 150, 150);
     text-decoration: none;
     font-size: inherit;
     transition: all 0.25s ease 0s;
+}
+
+a#jcHeadLink {
+    color: rgb(250, 250, 240);
+    text-decoration: none;
+    font-size: inherit;
+    transition: all 0.25s ease 0s;
+}
+
+a#jcLink:hover,
+a#jcHeadLink:hover {
+    color: var(--theme);
 }
 
 a#galLink:hover {

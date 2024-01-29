@@ -39,6 +39,7 @@ blue: rgb(0,161,255)
     font-weight: normal;
     text-align: center;
     padding-top: 25px;
+    line-height: 1em;
 }
 
 
@@ -85,7 +86,7 @@ iframe {
 
 
 
-div.cheems {
+/* div.cheems {
     display:block;
     width: 150px;
     height: 150px;
@@ -98,7 +99,7 @@ div.cheems {
 .cheems:hover {
     background: url("../images/cheemsCSS.png") no-repeat;
     background-size:contain;
-}
+} */
 
 
 /*MEDIA------------------------------------------------------*/
