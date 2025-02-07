@@ -35,8 +35,10 @@ blue: rgb(0,161,255)
 }
 
 .column>h1 {
+    font-family: "JetbrainsMono","courier new";
     font-size: 65px;
-    font-weight: normal;
+    font-weight: bolder;
+    font-style:italic;
     text-align: center;
     padding-top: 25px;
     line-height: 1em;

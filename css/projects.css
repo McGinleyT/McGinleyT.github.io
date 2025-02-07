@@ -53,8 +53,10 @@ img#websitelogo {
 }
 
 .column>h1 {
+    font-family: "JetbrainsMono", 'courier new', serif;
     font-size: 65px;
-    font-weight: normal;
+    font-weight: bolder;
+    font-style:italic;
     text-align: center;
     padding-top: 25px;
     line-height: 1em;
