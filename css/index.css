@@ -21,7 +21,7 @@ orange: rgb(255,100,0)
     margin: 100px auto 70px;
     justify-content: center;
     text-align: center;
-    font-family: "JetbrainsMono",serif;
+    font-family: serif;
     font-weight: normal;
     font-size: 64px;
     color: rgb(250, 250, 240);
@@ -44,7 +44,7 @@ h1 {
     font-size: 100px;
     margin-top: 10px;
     font-weight:bolder;
-    font-style:italic;
+    /* font-style:italic; */
 }
 
 h2 {
