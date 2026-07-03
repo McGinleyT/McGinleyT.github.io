@@ -11,137 +11,170 @@
     <meta name="author" content="Thomas McGinley">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./css/reset.css" rel="stylesheet" />
-    <link href="./css/shared.css" rel="stylesheet" />
-    <link href="./css/contact.css" rel="stylesheet" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/shared.css" rel="stylesheet" />
     <link rel="icon" href="./images/logo.png" />
 </head>
 
+<svg display="none">
+    <filter id="rgb-diffract">
+        <feOffset id="redshift" in="SourceGraphic" dx="-3" dy="0" result="layer-one" />
+        <feComponentTransfer in="layer-one" result="red">
+            <feFuncR type="identity" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
 
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="0" result="layer-two" />
+        <feComponentTransfer in="layer-two" result="green">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="identity" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="blueshift" in="SourceGraphic" dx="3" dy="0" result="layer-three" />
+        <feComponentTransfer in="layer-three" result="blue">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="identity" />
+        </feComponentTransfer>
+        <feBlend in="red" in2="green" mode="screen" result="blend1" />
+        <feBlend in="blend1" in2="blue" mode="screen" result="color-split" />
+    </filter>
+</svg>
+
+<svg display="none">
+    <filter id="rgb-diffract-triangular">
+        <feOffset id="redshift" in="SourceGraphic" dx="-1" dy="-1" result="layer-one" />
+        <feComponentTransfer in="layer-one" result="red">
+            <feFuncR type="identity" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="1" result="layer-two" />
+        <feComponentTransfer in="layer-two" result="green">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="identity" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="blueshift" in="SourceGraphic" dx="1" dy="-1" result="layer-three" />
+        <feComponentTransfer in="layer-three" result="blue">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="identity" />
+        </feComponentTransfer>
+        <feBlend in="red" in2="green" mode="screen" result="blend1" />
+        <feBlend in="blend1" in2="blue" mode="screen" result="color-split" />
+    </filter>
+</svg>
+
+<svg display="none">
+    <filter id="rgb-diffract-subtle">
+        <feOffset id="redshift" in="SourceGraphic" dx="-1" dy="0" result="layer-one" />
+        <feComponentTransfer in="layer-one" result="red">
+            <feFuncR type="identity" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="0" result="layer-two" />
+        <feComponentTransfer in="layer-two" result="green">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="identity" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="blueshift" in="SourceGraphic" dx="1" dy="0" result="layer-three" />
+        <feComponentTransfer in="layer-three" result="blue">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="identity" />
+        </feComponentTransfer>
+        <feBlend in="red" in2="green" mode="screen" result="blend1" />
+        <feBlend in="blend1" in2="blue" mode="screen" result="color-split" />
+    </filter>
+</svg>
 
 <body>
-    <!--        HEADER        -->
-    <header>
-        <div class="headCol">
-            <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
-            <div class="headRight">
-                <h1 id="pageTitle">CONTACT</h1>
-                <nav>
-                    <ul class="pagelinks">
-                        <li class="home"><a link href="./index.html">//Home</a></li>
-                        <li class="proj"><a link href="./projects.html">//Projects</a></li>
-                        <li class="gal"><a link href="./gallery.html">//Gallery</a></li>
-                        <li class="abt"><a link href="./about.html">//About</a></li>
-                        <li class="con"><a link href="./contact.html">//Contact</a></li>
-                    </ul>
-                </nav>
+    <div class="column">
+        <div class="column__left">
+            <hr>
+            <nav class="nav column__element column__element--stack">
+                <a class="nav__logo" href="./index.html"><img class="nav__logo" src="./assets/images/logo.png"
+                        alt="logo" /></a>
+                <ol class="nav__list">
+                    <li class="nav__item"><a class="nav__link nav__link--projects"
+                            href="./projects.html">//{Projects}</a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link nav__link--about " href="./about.html">//{About}</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--contact nav__link--active"
+                            href="./contact.html">//{Contact}</a>
+                    </li>
+                </ol>
+            </nav>
+            <hr>
+            <div class="card column__element column__element--stack">
+                <div class="card__head">
+                    <img class="card__image" src="./assets/images/contact.JPG" alt="contact photo" />
+                    <h1 class="card__title">CONTACT</h1>
+                </div>
+                <div class="card__body">
+                    <p class="card__text">
+                        If you wish to contact me, please fill out the form on this page.
+                        I will respond as soon as possible, though with my busy life it may take up to 48 hours.
+                        Please be patient in awaiting your response.
+                    </p>
+                    <p class="card__text">
+                        Thank you!
+                    </p>
+                </div>
+            </div>
+            <hr>
+
+            <!--        SOCIALS        -->
+            <div class="socials column__element column__element--stack">
+                <ul class="socials__list">
+                    <li class="socials__item"><a href="https://github.com/McGinleyT"><img class="socials__icon"
+                                src="./assets/images/github.svg" alt="github"></a></li>
+                    <li class="socials__item"><a href="https://www.instagram.com/mcginley.937/"><img
+                                class="socials__icon" src="./assets/images/instagram.svg" alt="instagram"></a>
+                    </li>
+                    <li class="socials__item"><a href="https://www.linkedin.com/in/thomas-j-mcginley"><img
+                                class="socials__icon" src="./assets/images/linkedin.svg" alt="linkedin"></a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="column__right">
+            <!--        MAIN        -->
+            <div class="main column__element column__element--single">
+                <div class="main__contentbox">
+                    <div class="main__container main__container--wide" style="grid-column: span 6;">
+                        <h1 class="main__texthead">Contact form</h1>
+                        <form class="form" action="https://formspree.io/f/xqevwplp" method="POST">
+                            <label class="form__label">
+                                Your email:
+                                <input class="form__input" type="email" name="email">
+                            </label>
+                            <label class="form__label">
+                                Your message:
+                                <textarea class="form__textarea" name="message"></textarea>
+                            </label>
+                            <!-- your other form fields go here -->
+                            <button class="form__submit" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-
-
-
-    <!--        MAIN        -->
-    <div class="main">
-        <!--        LEFT COLUMN        -->
-        <div class="column">
-            <br>
-            <p id="description">
-                If you're looking to get in contact with me, there are a few options for you! Whether you are looking
-                to get in touch with an employment opportunity, want to comment on my work, or just about anything else,
-                there are a few ways you can do so.
-            </p>
-            <p id="description">
-                The best way to get ahold of me is to send me an email at
-                <a class="contactlink" href="mailto: thomasmcginley360@gmail.com">thomasmcginley360@gmail.com</a>.
-                I will make sure to reply to anything sent there within 24 hours.
-            </p>
-            <p id="description">
-                The backend of this form is broken as of version 0.4.0. Email me directly at <a
-                    class="contactlink" href="mailto: thomasmcginley360@gmail.com">thomasmcginley360@gmail.com</a> if
-                you do not hear back from me in a timely manner. Thank you for your patience as I learn.
-            </p>
-        </div>
-
-
-
-        <!--        RIGHT COLUMN        -->
-        <div class="column">
-            <h2 id="disclaimer">required fields marked with *</h2>
-
-            <!--        FORM        -->
-            <form contact class="gform" method="POST"
-                action="https://script.google.com/macros/s/AKfycbxg-KFkOFWB4TspCx_7Bm3hwzCCBwenxq5lYsH9Q3sTsYW-m5oCtCWnukjO65-mIAjk/exec"
-                onsubmit="alert('Thank you for your submission!\nI\'ll get back to you as soon as possible.'),form.reset()">
-                <p>Name? *</p>
-                <input type="text" id="name" name="name" maxlength="250" placeholder="ex. John Doe" required>
-                <br><br><br>
-
-                <p>Reason for contact? (Select all that apply)</p>
-                <input type="checkbox" id="op1" name="Reason" value="Employment">
-                <label for="op1">Job offer</label><br>
-                <input type="checkbox" id="op2" name="Reason" value="Commission">
-                <label for="op2">Commissions</label><br>
-                <input type="checkbox" id="op3" name="Reason" value="Guidance">
-                <label for="op3">Looking for help</label><br>
-                <input type="checkbox" id="op4" name="Reason" value="Casual">
-                <label for="op4">Just chatting</label><br>
-                <input type="checkbox" id="op5" name="Reason" value="Other">
-                <label for="op5">Something else</label><br>
-                <br><br>
-
-                <p>What is the best way to reach you for a reply?</p>
-                <input type="radio" id="opt1" name="reply method" value="Phone">
-                <label for="opt1">Phone</label>
-                <input type="radio" id="opt2" name="reply method" value="Email">
-                <label for="opt2">Email</label>
-                <input type="radio" id="opt3" name="reply method" value="Text">
-                <label for="opt3">Text</label>
-                <br><br><br>
-
-                <p>What's a good phone number to reach you at? *</p>
-                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
-                <br><br>
-
-                <p>A different number for text, if applicable:</p>
-                <input type="tel" id="phone" name="alt phone" placeholder="123-456-7890">
-                <br><br><br>
-
-                <p>What's a good email address to reach you at? *</p>
-                <input type="email" id="email" name="email" placeholder="name@address.com" required>
-                <br><br><br>
-
-                <p>Message *</p>
-                <textarea id="msg" rows="4" cols="30" name="message"></textarea>
-                <br><br><br>
-
-                <input type="submit" id="submit">
-                <input type="reset" id="reset">
-            </form>
-        </div>
     </div>
-
-
-
-    <!--        SOCIALS        -->
-    <div class="socials">
-        <ul>
-            <li><a href="https://github.com/McGinleyT"><img src="./images/github.png" alt="github"></a></li>
-            <li><a href="https://www.instagram.com/mcginley.937/"><img src="./images/ig.png" alt="instagram"></a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/thomas-mcginley-589570271"><img src="./images/linkedin.png"
-                        alt="linkedin"></a></li>
-        </ul>
-    </div>
-
-
-
     <!--        FOOTER        -->
     <footer>
-        THOMAS McGINLEY &nbsp; | &nbsp; APRIL 2023 &nbsp; | &nbsp; <a class="contactlink"
-            href="./special.html">&#9067;</a>
-        &nbsp; | &nbsp; <a class="contactlink" href="tel:+19379419169">(937)941-9169</a>
+        THOMAS McGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
+        &nbsp; | &nbsp; <a class="nav__link" href="./privacy.html">PRIVACY
+            POLICY</a>
         <!--&nbsp; is NonBreakingSpace TM 4/18-->
     </footer>
-    <script data-cfasync="false" type="text/javascript" src="./scripts/form-submission-handler.js"></script>
 </body>

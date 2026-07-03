@@ -11,57 +11,154 @@
     <meta name="author" content="Thomas McGinley">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./css/reset.css" rel="stylesheet" />
-    <link href="./css/shared.css" rel="stylesheet" />
-    <link href="./css/special.css" rel="stylesheet" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/shared.css" rel="stylesheet" />
     <link rel="icon" href="./images/logo.png" />
 </head>
 
+<svg display="none">
+    <filter id="rgb-diffract">
+        <feOffset id="redshift" in="SourceGraphic" dx="-3" dy="0" result="layer-one" />
+        <feComponentTransfer in="layer-one" result="red">
+            <feFuncR type="identity" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="0" result="layer-two" />
+        <feComponentTransfer in="layer-two" result="green">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="identity" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="blueshift" in="SourceGraphic" dx="3" dy="0" result="layer-three" />
+        <feComponentTransfer in="layer-three" result="blue">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="identity" />
+        </feComponentTransfer>
+        <feBlend in="red" in2="green" mode="screen" result="blend1" />
+        <feBlend in="blend1" in2="blue" mode="screen" result="color-split" />
+    </filter>
+</svg>
+
+<svg display="none">
+    <filter id="rgb-diffract-triangular">
+        <feOffset id="redshift" in="SourceGraphic" dx="-1" dy="-1" result="layer-one" />
+        <feComponentTransfer in="layer-one" result="red">
+            <feFuncR type="identity" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="1" result="layer-two" />
+        <feComponentTransfer in="layer-two" result="green">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="identity" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="blueshift" in="SourceGraphic" dx="1" dy="-1" result="layer-three" />
+        <feComponentTransfer in="layer-three" result="blue">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="identity" />
+        </feComponentTransfer>
+        <feBlend in="red" in2="green" mode="screen" result="blend1" />
+        <feBlend in="blend1" in2="blue" mode="screen" result="color-split" />
+    </filter>
+</svg>
+
+<svg display="none">
+    <filter id="rgb-diffract-subtle">
+        <feOffset id="redshift" in="SourceGraphic" dx="-1" dy="0" result="layer-one" />
+        <feComponentTransfer in="layer-one" result="red">
+            <feFuncR type="identity" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="0" result="layer-two" />
+        <feComponentTransfer in="layer-two" result="green">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="identity" />
+            <feFuncB type="discrete" tableValues="0" />
+        </feComponentTransfer>
+
+        <feOffset id="blueshift" in="SourceGraphic" dx="1" dy="0" result="layer-three" />
+        <feComponentTransfer in="layer-three" result="blue">
+            <feFuncR type="discrete" tableValues="0" />
+            <feFuncG type="discrete" tableValues="0" />
+            <feFuncB type="identity" />
+        </feComponentTransfer>
+        <feBlend in="red" in2="green" mode="screen" result="blend1" />
+        <feBlend in="blend1" in2="blue" mode="screen" result="color-split" />
+    </filter>
+</svg>
+
 <body>
-    <!--        HEADER        -->
-    <header>
-        <div class="headCol">
-            <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
-            <div class="headRight">
-                <h1 id="pageTitle">SPECIAL&nbsp;&nbsp;</h1>
-                <nav>
-                    <ul class="pagelinks">
-                        <li class="home"><a link href="./index.html">//Home</a></li>
-                        <li class="proj"><a link href="./projects.html">//Projects</a></li>
-                        <li class="gal"><a link href="./gallery.html">//Gallery</a></li>
-                        <li class="abt"><a link href="./about.html">//About</a></li>
-                        <li class="con"><a link href="./contact.html">//Contact</a></li>
-                    </ul>
-                </nav>
+    <div class="column">
+        <div class="column__left">
+            <hr>
+            <nav class="nav column__element column__element--stack">
+                <a class="nav__logo" href="./index.html"><img class="nav__logo" src="./assets/images/logo.png"
+                        alt="logo" /></a>
+                <ol class="nav__list">
+                    <li class="nav__item"><a class="nav__link nav__link--projects"
+                            href="./projects.html">//{Projects}</a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link nav__link--about" href="./about.html">//{About}</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--contact" href="./contact.html">//{Contact}</a>
+                    </li>
+                </ol>
+            </nav>
+            <hr>
+            <div class="card column__element column__element--stack">
+                <div class="card__head">
+                    <img class="card__image" src="./assets/images/profile.jpeg" alt="profile picture" />
+                    <h1 class="card__title">Special</h1>
+                </div>
+                <div class="card__body">
+                    <p class="card__text">
+                        You found the special page! This is where I test new and exciting features of the site.
+                    </p>
+                </div>
+            </div>
+            <hr>
+
+            <!--        SOCIALS        -->
+            <div class="socials column__element column__element--stack">
+                <ul class="socials__list">
+                    <li class="socials__item"><a href="https://github.com/McGinleyT"><img class="socials__icon"
+                                src="./assets/images/github.svg" alt="github"></a></li>
+                    <li class="socials__item"><a href="https://www.instagram.com/mcginley.937/"><img
+                                class="socials__icon" src="./assets/images/instagram.svg" alt="instagram"></a>
+                    </li>
+                    <li class="socials__item"><a href="https://www.linkedin.com/in/thomas-j-mcginley"><img
+                                class="socials__icon" src="./assets/images/linkedin.svg" alt="linkedin"></a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="column__right">
+            <!--        MAIN        -->
+            <div class="main column__element column__element--single">
+                <div class="main__contentbox">
+                    <div class="main__container">
+                        <p class="main__text">
+                            There is something very empty about this space...
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-
-
-
-    <!--        MAIN           -->
-    <div class="main">
-        
     </div>
-    <!--        SOCIALS        -->
-    <div class="socials">
-        <ul>
-            <li><a href="https://github.com/McGinleyT"><img src="./images/github.png" alt="github"></a></li>
-            <li><a href="https://www.instagram.com/mcginley.937/"><img src="./images/ig.png" alt="instagram"></a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/thomas-mcginley-589570271"><img src="./images/linkedin.png"
-                        alt="linkedin"></a></li>
-        </ul>
-    </div>
-
-
-
     <!--        FOOTER        -->
     <footer>
-        THOMAS McGINLEY &nbsp; | &nbsp; APRIL 2023 &nbsp; | &nbsp; <a class="contactlink"
-            href="./special.html">&#9067;</a>
-        &nbsp; | &nbsp; <a class="contactlink" href="tel:+19379419169">(937)941-9169</a>
-        
-         <!--&nbsp; is NonBreakingSpace TM 4/18-->
+        THOMAS McGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
+        &nbsp; | &nbsp; <a class="nav__link" href="./privacy.html">PRIVACY
+            POLICY</a>
+        <!--&nbsp; is NonBreakingSpace TM 4/18-->
     </footer>
 </body>
