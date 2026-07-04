@@ -9,12 +9,6 @@ orange: rgb(255,100,0)
 
 :root {
     --text-white: rgb(250, 250, 240);
-
-    --home-theme: rgb(255, 0, 33);
-    --projects-theme: rgb(255, 100, 0);
-    --about-theme: rgb(0, 255, 95);
-    --contact-theme: rgb(0, 161, 255);
-    --an_time: 2s
 }
 
 * {
@@ -84,6 +78,7 @@ hr {
     display: flex;
     align-items: center;
     justify-self: center;
+    -webkit-backdrop-filter: url(#rgb-diffract) blur(1px);
     backdrop-filter: url(#rgb-diffract) blur(1px);
     width: 30%;
 }
@@ -152,6 +147,7 @@ img {
     display: block;
     align-items: center;
     justify-self: center;
+    -webkit-backdrop-filter: url(#rgb-diffract) blur(1px);
     backdrop-filter: url(#rgb-diffract) blur(1px);
     width: 30%;
     padding: 10px;
