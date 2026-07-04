@@ -73,6 +73,7 @@ hr {
 
 .column__element {
     width: 100%;
+    -webkit-backdrop-filter: url(#rgb-diffract) blur(var(--filterblur));
     backdrop-filter: url(#rgb-diffract) blur(var(--filterblur));
     /* background-color: var(--glass); */
 }
@@ -303,6 +304,7 @@ hr {
 .form__input {
     background-color: var(--glass);
     width: 100%;
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     color: var(--text-white);
     font-family: 'Courier New', Courier, monospace;
@@ -344,6 +346,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    -webkit-backdrop-filter: url(#rgb-diffract) blur(var(1px));
     backdrop-filter: url(#rgb-diffract) blur(1px);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
