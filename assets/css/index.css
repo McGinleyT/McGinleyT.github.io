@@ -9,6 +9,8 @@ orange: rgb(255,100,0)
 
 :root {
     --text-white: rgb(250, 250, 240);
+    --an_time: 4s;
+    --filterblur: .35px;
 }
 
 * {
@@ -68,21 +70,63 @@ hr {
     width: 30%;
     height: 1px;
     background-color: var(--text-white);
-    filter: url(#rgb-diffract)
+    filter: url(#rgb-diffract);
+}
+
+@keyframes openHR {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 30%;
+    }
+}
+
+hr:not(.privacy__hr) {
+    animation: openHR var(--an_time) ease-in-out;
+    animation-fill-mode: backwards;
 }
 
 
-
 /*NAVIGATION--------------------------------------*/
+@keyframes openNav {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 30%;
+        height: 0;
+    }
+
+    100% {
+        height: 22vh;
+    }
+}
+
 .nav {
     display: flex;
     align-items: center;
     justify-self: center;
-    -webkit-backdrop-filter: url(#rgb-diffract) blur(1px);
-    backdrop-filter: url(#rgb-diffract) blur(1px);
     width: 30%;
+    height: 22vh;
+    overflow: hidden;
+    margin: 0 auto;
+    animation: openNav var(--an_time) ease-in-out;
+    animation-fill-mode: backwards;
+    background-color: rgb(20 20 20 / .5);
+    backdrop-filter: url(#rgb-diffract) blur(var(--filterblur));
 }
 
+@supports (-webkit-backdrop-filter: blur(var(--filterblur))) {
+
+    .nav {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+    }
+}
 
 .nav__list {
     display: inline-block;
@@ -98,7 +142,7 @@ hr {
     animation-name: fadein;
     animation-duration: var(--an_time);
     animation-direction: normal;
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
     animation-fill-mode: backwards;
     font-weight: normal;
     font-size: 16px;
@@ -113,6 +157,10 @@ hr {
 
 @keyframes fadein {
     0% {
+        color: transparent;
+    }
+
+    60% {
         color: transparent;
     }
 
@@ -147,10 +195,19 @@ img {
     display: block;
     align-items: center;
     justify-self: center;
-    -webkit-backdrop-filter: url(#rgb-diffract) blur(1px);
-    backdrop-filter: url(#rgb-diffract) blur(1px);
     width: 30%;
     padding: 10px;
+    margin: 0 auto;
+    background-color: rgb(20 20 20 / .5);
+    backdrop-filter: url(#rgb-diffract) blur(var(--filterblur));
+}
+
+@supports (-webkit-backdrop-filter: blur(var(--filterblur))) {
+
+    .privacy {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+    }
 }
 
 .privacy__title {
@@ -169,8 +226,14 @@ img {
 
     .nav,
     .privacy,
-    hr {
+    hr,
+    hr:not(.privacy__hr) {
         width: 66%;
+        animation: none;
+    }
+
+    .nav__link {
+        animation: none;
     }
 
     .privacy__content {
