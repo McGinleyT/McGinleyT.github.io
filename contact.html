@@ -98,81 +98,34 @@
 </svg>
 
 <body>
-    <div class="column">
-        <div class="column__left">
-            <hr>
-            <nav class="nav column__element column__element--stack">
-                <a class="nav__logo" href="./index.html"><img class="nav__logoimage" src="./assets/images/logo.png"
-                        alt="logo" /></a>
-                <ol class="nav__list">
-                    <li class="nav__item"><a class="nav__link nav__link--projects"
-                            href="./projects.html">//{Projects}</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link nav__link--about " href="./about.html">//{About}</a></li>
-                    <li class="nav__item"><a class="nav__link nav__link--contact nav__link--active"
-                            href="./contact.html">//{Contact}</a>
-                    </li>
-                </ol>
-            </nav>
-            <hr>
-            <div class="card column__element column__element--stack">
-                <div class="card__head">
-                    <img class="card__image" src="./assets/images/contact.JPG" alt="contact photo" />
-                    <h1 class="card__title">CONTACT</h1>
-                </div>
-                <div class="card__body">
-                    <p class="card__text">
-                        If you wish to contact me, please fill out the form on this page.
-                        I will respond as soon as possible, though with my busy life it may take up to 48 hours.
-                        Please be patient in awaiting your response.
-                    </p>
-                    <p class="card__text">
-                        Thank you!
-                    </p>
-                </div>
-            </div>
-            <hr>
-
-            <!--        SOCIALS        -->
-            <div class="socials column__element column__element--stack">
-                <ul class="socials__list">
-                    <li class="socials__item"><a href="https://github.com/McGinleyT"><img class="socials__icon"
-                                src="./assets/images/github.svg" alt="github"></a></li>
-                    <li class="socials__item"><a href="https://www.instagram.com/mcginley.937/"><img
-                                class="socials__icon" src="./assets/images/instagram.svg" alt="instagram"></a>
-                    </li>
-                    <li class="socials__item"><a href="https://www.linkedin.com/in/thomas-j-mcginley"><img
-                                class="socials__icon" src="./assets/images/linkedin.svg" alt="linkedin"></a></li>
-                </ul>
-            </div>
-            <hr>
-        </div>
-        <div class="column__right">
-            <!--        MAIN        -->
-            <div class="main column__element column__element--single">
-                <div class="main__contentbox">
-                    <div class="main__container main__container--wide" style="grid-column: span 6;">
-                        <h1 class="main__texthead">Contact form</h1>
-                        <form class="form" action="https://formspree.io/f/xqevwplp" method="POST">
-                            <label class="form__label">
-                                Your email:
-                                <input class="form__input" type="email" name="email">
-                            </label>
-                            <label class="form__label">
-                                Your message:
-                                <textarea class="form__textarea" name="message"></textarea>
-                            </label>
-                            <!-- your other form fields go here -->
-                            <button class="form__submit" type="submit">Send</button>
-                        </form>
+    <nav class="nav">
+        <a class="nav__link" href="./index.html">Home</a> &nbsp; | &nbsp; <a class="nav__link"
+            href="./projects.html">Projects</a> &nbsp; | &nbsp; <a class="nav__link" href="./about.html">About</a>
+        &nbsp; | &nbsp; <a class="nav__link nav__link--active" href="./contact.html">Contact</a>
+    </nav>
+    <hr>
+    <div class="main">
+        <div class="main__contentbox">
+            <div class="main__container">
+                <div class="main__head">
+                    <h1 class="main__texthead">Contact Me</h1>
+                    <div class="main__imagebox">
+                        <a href="https://www.instagram.com/mcginley.937/" target="_blank" rel="noopener noreferrer"><img
+                                class="main__image diffracted--hover" src="./assets/images/instagram.svg"
+                                alt="instagram"></a>
+                        <a href="https://www.linkedin.com/in/thomas-j-mcginley" target="_blank"
+                            rel="noopener noreferrer"><img class="main__image diffracted--hover"
+                                src="./assets/images/linkedin.svg" alt="linkedin"></a>
                     </div>
                 </div>
+                <p class="main__text">Feel free to contact me at one of the provided social links.</p>
             </div>
         </div>
     </div>
+    <hr>
     <!--        FOOTER        -->
     <footer>
-        THOMAS McGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
+        THOMAS MCGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
         &nbsp; | &nbsp; <a class="nav__link" href="./privacy.html">PRIVACY
             POLICY</a>
         <!--&nbsp; is NonBreakingSpace TM 4/18-->

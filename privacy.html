@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./assets/css/reset.css" rel="stylesheet" />
-    <link href="./assets/css/index.css" rel="stylesheet" />
+    <link href="./assets/css/shared.css" rel="stylesheet" />
     <link rel="icon" href="./assets/images/logo.png" />
 </head>
 
@@ -44,28 +44,38 @@
 </svg>
 
 <body>
-    <div class="home__title">
-        <a class="nav__logo" href="./index.html"><img src="./assets/images/logo.png" alt="logo" /></a>
+    <nav class="nav">
+        <a class="nav__link" href="./index.html">Home</a> &nbsp; | &nbsp; <a class="nav__link"
+            href="./projects.html">Projects</a> &nbsp; | &nbsp; <a class="nav__link" href="./about.html">About</a>
+        &nbsp; | &nbsp; <a class="nav__link nav__link--active" href="./contact.html">Contact</a>
+    </nav>
+    <hr>
+    <div class="main">
+        <div class="main__contentbox">
+            <div class="main__container">
+                <div class="main__head">
+                    <h1 class="main__texthead">Privacy Policy</h1>
+                    <h1 class="main__texthead">Effective Date: July 3, 2026</h1>
+                </div>
+                <p class="main__text">1. Information We Collect:
+                    We do not collect, store, or have access to any personal
+                    information or data from your device. You can use our application/website completely anonymously.
+                </p>
+                <p class="main__text">2. Third-Party Services: We do not use analytics tools, tracking cookies, or
+                    third-party services that collect your data.</p>
+                <p class="main__text">3. Contact Information: If you have any questions about our privacy practices, you
+                    can
+                    contact us at <a class="nav__link outlink" href="mailto:thomasmcginley360@gmail.com"
+                        style="animation: none; font-size: inherit;">this email</a>.</p>
+            </div>
+        </div>
     </div>
-    <hr class="privacy__hr">
-    <div class="privacy">
-        <h1 class="privacy__title">
-            Privacy Policy
-        </h1>
-        <br>
-        <h1 class="privacy__title">
-            Effective Date: July 3, 2026
-        </h1>
-        <p class="privacy__content">1. Information We Collect:
-            We do not collect, store, or have access to any personal
-            information or data from your device. You can use our application/website completely anonymously.</p>
-        <p class="privacy__content">2. Third-Party Services: We do not use analytics tools, tracking cookies, or
-            third-party services that collect your data.</p>
-        <p class="privacy__content">3. Contact Information: If you have any questions about our privacy practices, you
-            can
-            contact us at <a class="nav__link" href="mailto:thomasmcginley360@gmail.com"
-                style="animation: none; font-size: inherit;">thomasmcginley360@gmail.com</a>.
-        </p>
-    </div>
-    <hr class="privacy__hr">
+    <hr>
+    <!--        FOOTER        -->
+    <footer>
+        THOMAS MCGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
+        &nbsp; | &nbsp; <a class="nav__link" href="./privacy.html">PRIVACY
+            POLICY</a>
+        <!--&nbsp; is NonBreakingSpace TM 4/18-->
+    </footer>
 </body>

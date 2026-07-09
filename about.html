@@ -44,22 +44,22 @@
 </svg>
 
 <svg style="position:absolute; width: 0; height: 0; visibility: hidden;">
-    <filter id="rgb-diffract-triangular">
-        <feOffset id="redshift" in="SourceGraphic" dx="-1" dy="-1" result="layer-one" />
+    <filter id="rgb-diffract-vertical">
+        <feOffset id="redshift" in="SourceGraphic" dx="0" dy="-1" result="layer-one" />
         <feComponentTransfer in="layer-one" result="red">
             <feFuncR type="identity" />
             <feFuncG type="discrete" tableValues="0" />
             <feFuncB type="discrete" tableValues="0" />
         </feComponentTransfer>
 
-        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="1" result="layer-two" />
+        <feOffset id="greenshift" in="SourceGraphic" dx="0" dy="0" result="layer-two" />
         <feComponentTransfer in="layer-two" result="green">
             <feFuncR type="discrete" tableValues="0" />
             <feFuncG type="identity" />
             <feFuncB type="discrete" tableValues="0" />
         </feComponentTransfer>
 
-        <feOffset id="blueshift" in="SourceGraphic" dx="1" dy="-1" result="layer-three" />
+        <feOffset id="blueshift" in="SourceGraphic" dx="0" dy="1" result="layer-three" />
         <feComponentTransfer in="layer-three" result="blue">
             <feFuncR type="discrete" tableValues="0" />
             <feFuncG type="discrete" tableValues="0" />
@@ -98,120 +98,94 @@
 </svg>
 
 <body>
-    <div class="column">
-        <div class="column__left">
-            <hr>
-            <nav class="nav column__element column__element--stack">
-                <a class="nav__logo" href="./index.html"><img class="nav__logoimage" src="./assets/images/logo.png"
-                        alt="logo" /></a>
-                <ol class="nav__list">
-                    <li class="nav__item"><a class="nav__link nav__link--projects"
-                            href="./projects.html">//{Projects}</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link nav__link--about nav__link--active"
-                            href="./about.html">//{About}</a></li>
-                    <li class="nav__item"><a class="nav__link nav__link--contact" href="./contact.html">//{Contact}</a>
-                    </li>
-                </ol>
-            </nav>
-            <hr>
-            <div class="card column__element column__element--stack">
-                <div class="card__head">
-                    <img class="card__image" src="./assets/images/profile.jpeg" alt="profile picture" />
-                    <h1 class="card__title">THOMAS McGINLEY</h1>
+    <nav class="nav">
+        <a class="nav__link" href="./index.html">Home</a> &nbsp; | &nbsp; <a class="nav__link"
+            href="./projects.html">Projects</a> &nbsp; | &nbsp; <a class="nav__link nav__link--active"
+            href="./about.html">About</a>
+        &nbsp; | &nbsp; <a class="nav__link" href="./contact.html">Contact</a>
+    </nav>
+    <hr>
+    <div class="main">
+        <div class="main__contentbox">
+            <!-- <div class="main__container">
+                
+            </div> -->
+            <div class="main__container">
+                <div class="main__head">
+                    <h1 class="main__texthead">Thomas McGinley</h1>
+                    <div class="main__imagebox">
+                        <a href="https://github.com/McGinleyT" target="_blank" rel="noopener noreferrer"><img
+                                class="main__image diffracted--hover" src="./assets/images/github.svg" alt="github"></a>
+                        <a href="https://www.instagram.com/mcginley.937/" target="_blank" rel="noopener noreferrer"><img
+                                class="main__image diffracted--hover" src="./assets/images/instagram.svg"
+                                alt="instagram"></a>
+                        <a href="https://www.linkedin.com/in/thomas-j-mcginley" target="_blank"
+                            rel="noopener noreferrer"><img class="main__image diffracted--hover"
+                                src="./assets/images/linkedin.svg" alt="linkedin"></a>
+                    </div>
                 </div>
-                <div class="card__body">
-                    <p class="card__text">
-                        I am a senior computer science student at the University of Dayton.
-                        Prior to UD, I attended Sinclair Community College where I earned an Associate Degree in
-                        computer
-                        science.
-                    </p>
-                    <p class="card__text">When I can, I like designing websites and working on my passion project; a new
-                        game built
-                        from the Pokémon Emerald engine.
-                    </p>
-                </div>
+                <img class="main__image main__image--profile covered diffracted" src="./assets/images/profile.jpeg"
+                    alt="profile">
+                <p class="main__text"> I am a senior computer science student at the University of Dayton.
+                    Prior to UD, I attended Sinclair Community College where I earned an Associate Degree in
+                    computer
+                    science. In my free time, I enjoy playing video games (especially Destiny), spending time with my
+                    family, and working on
+                    projects. My current passion project is a brand new game built on top of the Pokémon Emerald engine.
+                </p>
             </div>
-            <hr>
-
-            <!--        SOCIALS        -->
-            <div class="socials column__element column__element--stack">
-                <ul class="socials__list">
-                    <li class="socials__item"><a href="https://github.com/McGinleyT"><img class="socials__icon"
-                                src="./assets/images/github.svg" alt="github"></a></li>
-                    <li class="socials__item"><a href="https://www.instagram.com/mcginley.937/"><img
-                                class="socials__icon" src="./assets/images/instagram.svg" alt="instagram"></a>
-                    </li>
-                    <li class="socials__item"><a href="https://www.linkedin.com/in/thomas-j-mcginley"><img
-                                class="socials__icon" src="./assets/images/linkedin.svg" alt="linkedin"></a></li>
-                </ul>
-            </div>
-            <hr>
-        </div>
-        <div class="column__right">
-            <!--        MAIN        -->
-            <div class="main column__element column__element--single">
-                <div class="main__contentbox">
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/docker.svg"
-                            alt="docker">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/k8s.svg"
-                            alt="kubernetes">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/go.svg"
-                            alt="golang">
-                    </div>
-                    <div class="main__container main__container--wide">
-                        <h1 class="main__texthead">Cloud Engineering</h1>
-                        <p class="main__text">I currently work as a software engineering intern, with a focus on PaaS.
-                            During my intern phase at the company, I learned the basics of Docker, Kubernetes, and Go.
-                            Working on real-world problems sharpened my attention to detail while developing or
-                            implementing
-                            software. Throughout this time, I would work on CI/CD pipelines, integration of FOSS
-                            applications, and cluster management.</p>
-                    </div>
-                    <div class="main__container main__container--wide">
-                        <h1 class="main__texthead">Adaptability</h1>
-                        <p class="main__text">Many of my projects or assignments require me to learn and adapt to a
-                            changing technology ecosystem. Over the years I have learned to use different hardware,
-                            software, tools, and languages to help me solve problems. I learned Python and how to use
-                            Linux on Raspberry Pis to build Jötunn Comparer. I learned Bash and systems engineering at
-                            my job. The more I learn, the more I am able to adapt to changing environments.
-                        </p>
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted"
-                            src="./assets/images/raspberrypi.svg" alt="raspberry pi">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/python.svg"
-                            alt="python">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/bash.svg"
-                            alt="bash">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/html.svg"
-                            alt="html">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/css.svg"
-                            alt="css">
-                    </div>
-                    <div class="main__container"><img class="main__image diffracted" src="./assets/images/js.svg"
-                            alt="javascript">
-                    </div>
-                    <div class="main__container main__container--wide">
-                        <h1 class="main__texthead">Web Development</h1>
-                        <p class="main__text">I do all of my web development by hand. This is mostly a personal
-                            preference, as I enjoy building sites from scratch. I like to see the limits of HTML and
-                            CSS, and prefer to use their vanilla versions to do my work. While I have worked with React
-                            and Node.JS, I find joy in building from the ground up!</p>
+            <div class="main__container">
+                <div class="main__head">
+                    <h1 class="main__texthead">Cloud Engineering</h1>
+                    <div class="main__imagebox">
+                        <img class="main__image" src="./assets/images/docker.svg" alt="docker">
+                        <img class="main__image" src="./assets/images/k8s.svg" alt="kubernetes">
+                        <img class="main__image" src="./assets/images/go.svg" alt="golang">
                     </div>
                 </div>
+                <p class="main__text">I currently work as a software engineering intern, with a focus on PaaS.
+                    During my intern phase at the company, I learned the basics of Docker, Kubernetes, and Go.
+                    Working on real-world problems sharpened my attention to detail while developing or
+                    implementing
+                    software. Throughout this time, I would work on CI/CD pipelines, integration of FOSS
+                    applications, and cluster management.</p>
+            </div>
+            <div class="main__container">
+                <div class="main__head">
+                    <h1 class="main__texthead">Adaptability</h1>
+                    <div class="main__imagebox">
+                        <img class="main__image" src="./assets/images/raspberrypi.svg" alt="raspberry pi">
+                        <img class="main__image" src="./assets/images/python.svg" alt="python">
+                        <img class="main__image" src="./assets/images/bash.svg" alt="bash">
+                    </div>
+                </div>
+                <p class="main__text">Many of my projects or assignments require me to learn and adapt to a
+                    changing technology ecosystem. Over the years I have learned to use different hardware,
+                    software, tools, and languages to help me solve problems. I learned Python and how to use
+                    Linux on Raspberry Pis to build Jötunn Comparer. I learned Bash and systems engineering at
+                    my job. The more I learn, the more I am able to adapt to changing environments.
+                </p>
+            </div>
+            <div class="main__container">
+                <div class="main__head">
+                    <h1 class="main__texthead">Web Development</h1>
+                    <div class="main__imagebox">
+                        <img class="main__image" src="./assets/images/html.svg" alt="html">
+                        <img class="main__image" src="./assets/images/css.svg" alt="css">
+                        <img class="main__image" src="./assets/images/js.svg" alt="javascript">
+                    </div>
+                </div>
+                <p class="main__text">I do all of my web development by hand. This is mostly a personal
+                    preference, as I enjoy building sites from scratch. I like to see the limits of HTML and
+                    CSS, and prefer to use their vanilla versions to do my work. While I have worked with React
+                    and Node.JS, I find joy in building from the ground up!</p>
             </div>
         </div>
     </div>
+    <hr>
     <!--        FOOTER        -->
     <footer>
-        THOMAS McGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
+        THOMAS MCGINLEY &nbsp; | &nbsp; JULY 2026 &nbsp; | &nbsp; <a class="nav__link" href="./special.html">&#9067;</a>
         &nbsp; | &nbsp; <a class="nav__link" href="./privacy.html">PRIVACY
             POLICY</a>
         <!--&nbsp; is NonBreakingSpace TM 4/18-->

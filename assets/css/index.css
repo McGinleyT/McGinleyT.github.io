@@ -9,7 +9,6 @@ orange: rgb(255,100,0)
 
 :root {
     --text-white: rgb(250, 250, 240);
-    --an_time: 4s;
     --filterblur: .35px;
 }
 
@@ -73,38 +72,8 @@ hr {
     filter: url(#rgb-diffract);
 }
 
-@keyframes openHR {
-    0% {
-        width: 0;
-    }
-
-    50% {
-        width: 30%;
-    }
-}
-
-hr:not(.privacy__hr) {
-    animation: openHR var(--an_time) ease-in-out;
-    animation-fill-mode: backwards;
-}
-
 
 /*NAVIGATION--------------------------------------*/
-@keyframes openNav {
-    0% {
-        width: 0;
-        height: 0;
-    }
-
-    50% {
-        width: 30%;
-        height: 0;
-    }
-
-    100% {
-        height: 22vh;
-    }
-}
 
 .nav {
     display: flex;
@@ -114,8 +83,6 @@ hr:not(.privacy__hr) {
     height: 22vh;
     overflow: hidden;
     margin: 0 auto;
-    animation: openNav var(--an_time) ease-in-out;
-    animation-fill-mode: backwards;
     background-color: rgb(20 20 20 / .5);
     backdrop-filter: url(#rgb-diffract) blur(var(--filterblur));
 }
@@ -139,11 +106,6 @@ hr:not(.privacy__hr) {
 }
 
 .nav__link {
-    animation-name: fadein;
-    animation-duration: var(--an_time);
-    animation-direction: normal;
-    animation-timing-function: linear;
-    animation-fill-mode: backwards;
     font-weight: normal;
     font-size: 16px;
     text-decoration: none;
@@ -155,71 +117,11 @@ hr:not(.privacy__hr) {
     filter: url(#rgb-diffract);
 }
 
-@keyframes fadein {
-    0% {
-        color: transparent;
-    }
-
-    60% {
-        color: transparent;
-    }
-
-    100% {
-        color: var(--text-white)
-    }
-}
-
-.nav__link--projects {
-    animation-delay: 0s;
-}
-
-.nav__link--about {
-    animation-delay: .5s;
-}
-
-.nav__link--contact {
-    animation-delay: 1s;
-}
-
-.nav__link--privacy {
-    animation-delay: 1.5s;
-}
-
 img {
     display: block;
     margin: 10vh auto 0;
 }
 
-/*PRIVACY POLICY--------------------------------------*/
-.privacy {
-    display: block;
-    align-items: center;
-    justify-self: center;
-    width: 30%;
-    padding: 10px;
-    margin: 0 auto;
-    background-color: rgb(20 20 20 / .5);
-    backdrop-filter: url(#rgb-diffract) blur(var(--filterblur));
-}
-
-@supports (-webkit-backdrop-filter: blur(var(--filterblur))) {
-
-    .privacy {
-        -webkit-backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
-    }
-}
-
-.privacy__title {
-    margin: 0 20px;
-    text-transform: capitalize;
-    font-weight: normal;
-    font-size: 20px;
-}
-
-.privacy__content {
-    margin: 20px;
-}
 
 /*MEDIA--------------------------------------*/
 @media screen and (max-width: 900px) {
@@ -229,6 +131,10 @@ img {
     hr,
     hr:not(.privacy__hr) {
         width: 66%;
+        animation: none;
+    }
+
+    .nav__link {
         animation: none;
     }
 
