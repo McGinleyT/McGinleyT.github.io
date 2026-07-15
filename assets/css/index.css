@@ -32,6 +32,7 @@ html {
     font-family: 'Courier New', Courier, monospace;
     height: 100dvh;
     overflow-y: hidden;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -42,6 +43,7 @@ body {
     line-height: 1.2em;
     vertical-align: baseline;
     height: 100dvh;
+    overscroll-behavior-y: none;
 }
 
 /*TITLE--------------------------------------*/
