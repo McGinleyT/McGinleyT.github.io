@@ -30,6 +30,8 @@ html {
     background-size: auto;
     color: var(--text-white);
     font-family: 'Courier New', Courier, monospace;
+    height: 100dvh;
+    overflow-y: hidden;
 }
 
 body {
@@ -39,7 +41,7 @@ body {
     padding: 0px;
     line-height: 1.2em;
     vertical-align: baseline;
-    height: 95vh;
+    height: 100dvh;
 }
 
 /*TITLE--------------------------------------*/
